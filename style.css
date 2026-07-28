@@ -262,15 +262,17 @@ nav.scrolled {
 
 .hero-buttons {
   display: flex;
+  justify-content: center;
   gap: 24px;
-  justify-content: space-between;
   flex-wrap: wrap;
-  opacity: 0;
-  animation: fadeUp 0.8s 1.3s forwards;
-  margin-top: 32px;
 }
+.hero-content {
+  text-align: center;
+} 
+
 
 .btn-primary {
+  margin-right: 20px;
   background: var(--gold);
   color: var(--black);
   font-family: 'Cinzel', serif;
@@ -278,7 +280,9 @@ nav.scrolled {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  padding: 16px 40px;
+  width: 280px;             /* fixo, não min-width */
+  padding: 15px 20px;
+  text-align: center;
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -301,6 +305,10 @@ nav.scrolled {
 .btn-primary span { position: relative; z-index: 1; }
 
 .btn-secondary {
+  margin-left: 20px;
+  width: 280px;             /* fixo, mesmo valor do btn-primary */
+  padding: 15px 20px;
+  text-align: center;
   background: transparent;
   color: var(--gold);
   font-family: 'Cinzel', serif;
@@ -308,7 +316,6 @@ nav.scrolled {
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  padding: 15px 40px;
   border: 1px solid var(--gold-dark);
   cursor: pointer;
   text-decoration: none;
@@ -316,6 +323,7 @@ nav.scrolled {
   transition: all var(--transition);
   clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
 }
+
 .btn-secondary:hover {
   border-color: var(--gold);
   background: rgba(201,144,42,0.08);
